@@ -14,6 +14,49 @@
       color: #222;
     }
 
+    header {
+      background: linear-gradient(135deg, #ffd6e8, #fff2cc);
+      padding: 24px 16px 20px 16px;
+      text-align: center;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0 0 6px 0;
+      font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN",
+        "Yu Gothic", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      animation: hop 1.5s ease-out;
+
+    }
+
+    @keyframes hop {
+      0% {
+        transform: translateY(0);
+      }
+
+      30% {
+        transform: translateY(-30px);
+      }
+
+      60% {
+        transform: translateY(0);
+      }
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0;
+    }
+
     h1 {
       font-size: 1.4rem;
       margin-bottom: 0.5rem;
@@ -23,6 +66,26 @@
       font-size: 0.95rem;
       color: #555;
       margin-bottom: 1.2rem;
+    }
+
+    .accordion-title {
+      width: 100%;
+      background: linear-gradient(135deg, #ffe8cc, #f3dcc2);
+      border: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 1rem;
+      text-align: left;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+      margin-bottom: 8px;
+      color: #4a3b2a;
+
+    }
+
+    .accordion-content {
+      display: none;
+      margin-bottom: 16px;
     }
 
     .item {
@@ -62,139 +125,164 @@
 </head>
 
 <body>
-  <h1>ガチャガチャ アイテム出典一覧</h1>
+  <header>
+    <h1>🐴 ガチャガチャ<br>出典一覧</h1>
+  </header>
   <p class="intro">
-    このページは、2025新春展オリジナルガチャガチャに含まれる各アイテムの出典情報をまとめたものです。
+    このページは、2025新春展オリジナルガチャガチャに含まれる各アイテムとうまめ知識の出典情報をまとめたものです。
   </p>
 
-  <div class="item">
-    <h2>けむこむの書</h2>
-    <img src="img/item01_yuusuke.png" alt="ゆうすけの書"
-      style="width:250px;height:auto;border-radius:8px;margin-bottom:8px;">
-    <div class="meta">
-      <div><span class="label">作品名：</span>オリジナル作品のため無し</div>
-      <div><span class="label">制作者：</span>KemCoMオリジナル（書：2年 小池佑典）</div>
-      <div><span class="label">制作年：</span>2025</div>
+  <div class="accordion">
+    <button class="accordion-title">
+      🎁 ガチャアイテムの出典 ▼
+    </button>
+    <div class="accordion-content">
+      <!-- ここに今までの item div たちをそのまま入れる -->
+      <div class="item">
+        <h2>ゆうすけの書</h2>
+        <img src="img/item01_yuusuke.png" alt="ゆうすけの書"
+          style="width:250px;height:auto;border-radius:8px;margin-bottom:8px;">
+        <div class="meta">
+          <div><span class="label">制作者：</span>KemCoM（書：2年 小池佑典）</div>
+          <div><span class="label">制作年：</span>2025</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h2>KeMCO記念ゼッケン</h2>
+        <img src="img/item02_zekken.png" alt="KeMCO記念ゼッケン"
+          style="width:220px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 30px;">
+
+        <div class="meta">
+          <div><span class="label">制作者：</span>KemCoM</div>
+          <div><span class="label">制作年：</span>2025</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h2>馬具(杏葉)</h2>
+        <img src="img/item03_gyouyou.png" alt="馬具(杏葉)"
+          style="width:250px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 40px;">
+        <div class="meta">
+          <div><span class="label">作品名：</span>熊野神宮神宝図</div>
+          <div><span class="label">制作者：</span>宇治田忠郷</div>
+          <div><span class="label">制作年：</span>1794</div>
+          <div><span class="label">所蔵：</span>斯道文庫</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h2>生物景観図集</h2>
+        <div class="meta">
+          <div><span class="label">作品名：</span>生物景観図集［荒俣宏旧蔵 博物誌コレクション］</div>
+          <div><span class="label">制作者：</span>William Daniell</div>
+          <div><span class="label">制作年：</span>1809</div>
+          <div><span class="label">所蔵：</span>三田メディアセンター（慶應義塾図書館）</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h2>ラッキー蹄鉄</h2>
+        <img src="img/item05_horseshoe.png" alt="ラッキー蹄鉄"
+          style="width:200px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 40px;">
+
+        <div class="meta">
+          <div><span class="label">作品名：</span>Horse Shoe</div>
+          <div><span class="label">制作者：</span>GetDeadEntertainment</div>
+          <div><span class="label">所蔵：</span>Sketchfab（CC BY 4.0）</div>
+          <div><span class="label">URL：</span><a href="https://skfb.ly/6TXYo">https://skfb.ly/6TXYo</a></div>
+          <div>※本コンテンツは当該3Dデータを利用して作成した。</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h2>慶應人参</h2>
+        <div class="meta">
+          <div><span class="label">制作者：</span>KemCoM</div>
+          <div><span class="label">制作年：</span>2025</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h2>ナイト駒</h2>
+        <img src="img/item07_chess.png" alt="ナイト駒"
+          style="width:150px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 100px;">
+
+        <div class="meta">
+          <div><span class="label">作品名：</span>Black Horse Chess</div>
+          <div><span class="label">制作者：</span>omarelone</div>
+          <div><span class="label">所蔵：</span>Sketchfab（CC BY 4.0）</div>
+          <div><span class="label">URL：</span><a href="https://skfb.ly/o7uUM">https://skfb.ly/o7uUM</a></div>
+          <div>※本コンテンツは当該3Dデータを利用して作成した。</div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h2>古銅馬型</h2>
+        <div class="meta">
+          <div><span class="label">作品名：</span>古銅馬形水滴</div>
+          <div><span class="label">制作年：</span>17世紀</div>
+          <div><span class="label">所蔵：</span>ミュージアム・コモンズ</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="item">
-    <h2>KeMCO記念ゼッケン</h2>
-    <img src="img/item02_zekken.png" alt="KeMCO記念ゼッケン"
-      style="width:220px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 30px;">
 
-    <div class="meta">
-      <div><span class="label">作品名：</span>オリジナル作品のため無し</div>
-      <div><span class="label">制作者：</span>KemCoMオリジナル</div>
-      <div><span class="label">制作年：</span>2025</div>
+  <div class="accordion">
+    <button class="accordion-title">
+      🐴 馬の豆知識の出典 ▼
+    </button>
+    <div class="accordion-content">
+      <!-- <h1>馬に関する豆知識：出典一覧</h1>-->
+      <p class="intro">うまめ知識制作にあたり参考にした、馬に関する豆知識・背景情報の出典です。</p>
+      <!-- 豆知識の出典リスト -->
+      <div class="item">
+        <div class="meta">
+          <ol>
+            <li>"視野が広い馬の目。どこまで見える？視力・色覚・距離感は？".HORSE FAIR.2023-05-12.<br><a
+                href="https://jodhpurs.jp/contents/blog/20230512-22969/">https://jodhpurs.jp/contents/blog/20230512-22969/</a>
+            </li>
+            <li>"馬は立ったまま眠る？犬や猫との寝方の違いと睡眠の秘密".GORON by ペット共生アドバンスネット.2025-8-28<br><a
+                href="https://goron.co/archives/15759">https://goron.co/archives/15759</a></li>
+            <li>"馬をもっと知る".馬と人<br><a
+                href="http://umatohito.com/about_horse.html">http://umatohito.com/about_horse.html</a>
+            </li>
+            <li>"馬のひみつ 今回は馬の汗についてのおはなし！".エルミオーレ豊田.<br><a
+                href="https://www.elmeaure-toyota.com/%E4%B9%97%E9%A6%AC%E4%BD%93%E9%A8%93%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3/%E9%A6%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E5%8B%95%E7%89%A9-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/%E9%A6%AC%E3%81%AE%E3%81%B2%E3%81%BF%E3%81%A4-%E6%B1%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://www.elmeaure-toyota.com</a>
+            </li>
+            <li>"馬をもっと知る".馬と人<br><a
+                href="https://www.shepherd-clc.com/archives/1497">https://www.shepherd-clc.com/archives/1497</a></li>
+            <li>"「休題：馬の解剖：盲腸 ～大事な発酵槽～」".シェパードがおくる松本大策のサイト.2011-2-4<br><a
+                href="https://worldrecordcertification.com/ja/record/record-holders/life-and-health/3544/">https://worldrecordcertification.com/ja/record/record-holders/life-and-health/3544/</a>
+            </li>
+            <li>"馬はなぜ「いななく」のか".CREATORS STATION.2024-01-09<br><a
+                href="https://www.creators-station.jp/report/creators-eye/211399">https://www.creators-station.jp/report/creators-eye/211399</a>
+            </li>
+            <li>"馬、人の顔・声で心読む 北大チームが発表".日本経済新聞.2018-6-22.<br><a
+                href="https://www.nikkei.com/article/DGXMZO32100230S8A620C1CR0000/">https://www.nikkei.com/article/DGXMZO32100230S8A620C1CR0000/</a>(参照
+              2025-12-25)
+            </li>
+          </ol>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="item">
-    <h2>馬具(杏葉)</h2>
-    <img src="img/item03_gyouyou.png" alt="馬具(杏葉)"
-      style="width:250px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 40px;">
-    <div class="meta">
-      <div><span class="label">作品名：</span>熊野神宮神宝図</div>
-      <div><span class="label">制作者：</span>宇治田忠郷</div>
-      <div><span class="label">制作年：</span>1794</div>
-      <div><span class="label">所蔵：</span>斯道文庫</div>
-    </div>
-  </div>
 
-  <div class="item">
-    <h2>生物景観図集</h2>
-    <div class="meta">
-      <div><span class="label">作品名：</span>生物景観図集［荒俣宏旧蔵 博物誌コレクション］</div>
-      <div><span class="label">制作者：</span>William Daniell</div>
-      <div><span class="label">制作年：</span>1809</div>
-      <div><span class="label">所蔵：</span>三田メディアセンター（慶應義塾図書館）</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <h2>ラッキー蹄鉄</h2>
-    <img src="img/item05_horseshoe.png" alt="ラッキー蹄鉄"
-      style="width:200px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 40px;">
-
-    <div class="meta">
-      <div><span class="label">作品名：</span>Horse Shoe</div>
-      <div><span class="label">制作者：</span>GetDeadEntertainment</div>
-      <div><span class="label">所蔵：</span>Sketchfab（CC BY 4.0）</div>
-      <div><span class="label">URL：</span><a href="https://skfb.ly/6TXYo">https://skfb.ly/6TXYo</a></div>
-      <div>※本コンテンツは当該3Dデータを利用して作成した。</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <h2>慶應人参</h2>
-    <div class="meta">
-      <div><span class="label">作品名：</span>オリジナル作品のため無し</div>
-      <div><span class="label">制作者：</span>KemCoMオリジナル</div>
-      <div><span class="label">制作年：</span>2025</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <h2>ナイト駒</h2>
-    <img src="img/item07_chess.png" alt="ナイト駒"
-      style="width:150px;height:auto;border-radius:8px;margin-bottom:8px;margin-left: 100px;">
-
-    <div class="meta">
-      <div><span class="label">作品名：</span>Black Horse Chess</div>
-      <div><span class="label">制作者：</span>omarelone</div>
-      <div><span class="label">所蔵：</span>Sketchfab（CC BY 4.0）</div>
-      <div><span class="label">URL：</span><a href="https://skfb.ly/o7uUM">https://skfb.ly/o7uUM</a></div>
-      <div>※本コンテンツは当該3Dデータを利用して作成した。</div>
-    </div>
-  </div>
-
-  <div class="item">
-    <h2>古銅馬型</h2>
-    <div class="meta">
-      <div><span class="label">作品名：</span>古銅馬形水滴</div>
-      <div><span class="label">制作年：</span>17世紀</div>
-      <div><span class="label">所蔵：</span>ミュージアム・コモンズ</div>
-    </div>
-  </div>
-
-  <h1>馬に関する豆知識：出典一覧</h1>
-  <p class="intro">ガチャガチャ制作にあたり参考にした、馬に関する豆知識・背景情報の出典です。</p>
-
-
-  <div class="item">
-    <h2>出典一覧</h2>
-    <div class="meta">
-      <ol>
-        <li>"視野が広い馬の目。どこまで見える？視力・色覚・距離感は？".HORSE FAIR.2023-05-12.<br><a
-            href="https://jodhpurs.jp/contents/blog/20230512-22969/">https://jodhpurs.jp/contents/blog/20230512-22969/</a>
-        </li>
-        <li>"馬は立ったまま眠る？犬や猫との寝方の違いと睡眠の秘密".GORON by ペット共生アドバンスネット.2025-8-28<br><a
-            href="https://goron.co/archives/15759">https://goron.co/archives/15759</a></li>
-        <li>"馬をもっと知る".馬と人<br><a href="http://umatohito.com/about_horse.html">http://umatohito.com/about_horse.html</a>
-        </li>
-        <li>"馬のひみつ 今回は馬の汗についてのおはなし！".エルミオーレ豊田.<br><a
-            href="https://www.elmeaure-toyota.com/%E4%B9%97%E9%A6%AC%E4%BD%93%E9%A8%93%E3%83%AC%E3%83%83%E3%82%B9%E3%83%B3/%E9%A6%AC%E3%81%A3%E3%81%A6%E3%81%A9%E3%82%93%E3%81%AA%E5%8B%95%E7%89%A9-%E7%9F%A5%E3%81%A3%E3%81%A6%E3%81%8A%E3%81%8D%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8/%E9%A6%AC%E3%81%AE%E3%81%B2%E3%81%BF%E3%81%A4-%E6%B1%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://www.elmeaure-toyota.com</a>
-        </li>
-        <li>"馬をもっと知る".馬と人<br><a
-            href="https://www.shepherd-clc.com/archives/1497">https://www.shepherd-clc.com/archives/1497</a></li>
-        <li>"「休題：馬の解剖：盲腸 ～大事な発酵槽～」".シェパードがおくる松本大策のサイト.2011-2-4<br><a
-            href="https://worldrecordcertification.com/ja/record/record-holders/life-and-health/3544/">https://worldrecordcertification.com/ja/record/record-holders/life-and-health/3544/</a>
-        </li>
-        <li>"馬はなぜ「いななく」のか".CREATORS STATION.2024-01-09<br><a
-            href="https://www.creators-station.jp/report/creators-eye/211399">https://www.creators-station.jp/report/creators-eye/211399</a>
-        </li>
-        <li>"馬、人の顔・声で心読む 北大チームが発表".日本経済新聞.2018-6-22.<br><a
-            href="https://www.nikkei.com/article/DGXMZO32100230S8A620C1CR0000/">https://www.nikkei.com/article/DGXMZO32100230S8A620C1CR0000/</a>(参照
-          2025-12-25)
-        </li>
-      </ol>
-    </div>
-  </div>
 
   <footer>
     © 2025 ガチャガチャ出典情報
   </footer>
+  <script>
+    document.querySelectorAll('.accordion-title').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.style.display =
+          content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 
 </html>
